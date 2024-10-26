@@ -1,11 +1,14 @@
-// /Input.tsx
-import React from 'react';
+import React, { ChangeEvent } from 'react';
 
-interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> { }
+interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  label?: string; // Example of a custom prop
+}
 
-export  const Input: React.FC<InputProps> = ({ className = '', ...props }) => (
-  <input
-    className={`bg-gray-100 border border-gray-300 rounded-lg py-2 px-4 w-full focus:outline-none focus:ring-2 focus:ring-black ${className}`}
-    {...props}
-  />
+const Input: React.FC<InputProps> = ({ label, ...props }) => (
+  <div>
+    {label && <label className="text-gray-700">{label}</label>}
+    <input className="bg-gray-800 border border-gray-600 rounded-lg py-2 px-4 w-full text-white" {...props} />
+  </div>
 );
+
+export default Input;
