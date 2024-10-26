@@ -1,7 +1,7 @@
-import React, { ChangeEvent } from 'react';
+import React from 'react';
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  label?: string; // Example of a custom prop
+  label?: string; // Optional custom prop
 }
 
 const Input: React.FC<InputProps> = ({ label, ...props }) => (
@@ -11,4 +11,4 @@ const Input: React.FC<InputProps> = ({ label, ...props }) => (
   </div>
 );
 
-export default Input;
+export default Input; // Ensure you have this line
