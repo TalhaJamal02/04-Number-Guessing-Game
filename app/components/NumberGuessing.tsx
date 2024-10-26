@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, ChangeEvent, KeyboardEvent } from "react";
-import { Button } from "./ui/Button"; // Adjust this import based on your actual UI library
-import { Input } from "./ui/Input"; // Adjust this import based on your actual UI library
+import Button from "./ui/Button"; // Adjust this import based on your actual UI library
+import Input from "./ui/Input"; // Adjust this import based on your actual UI library
 
 export default function NumberGuessing(): JSX.Element {
   const [gameStarted, setGameStarted] = useState(false);
